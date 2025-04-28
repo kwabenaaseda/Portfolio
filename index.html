@@ -24,9 +24,9 @@
 <body>
 
     <!-- Hero Section -->
-    <header class="hero">
+    <header class="hero" id="hero">
         <h1>Hi, I'm <span class="typing"></span></h1>
-        <p class="tagline">Web Developer | Problem Solver | Creative Thinker</p>
+        <p class="tagline">Full Stack Web Developer | Problem Solver | Creative Thinker | Innovator</p>
         <a href="#projects" class="btn">View My Work</a>
     </header>
 
@@ -53,7 +53,7 @@ Let's connect and explore opportunities to collaborate!
         <h2>Qualifications</h2>
         <div class="cards">
             <div class="card">
-                <img src="/image/mountain.jpg" alt="Qualification 1">
+                <img src="/image/beach.jpeg" alt="Qualification 1">
                 <div class="card-content">Full-Stack Developer | MERN Stack</div>
             </div>
             <div class="card">
@@ -61,12 +61,32 @@ Let's connect and explore opportunities to collaborate!
                 <div class="card-content">Certified Ethical Hacker (CEH)</div>
             </div>
             <div class="card">
-                <img src="/image/mountain.jpg" alt="Qualification 3">
+                <img src="/image/new.jpg" alt="Qualification 3">
                 <div class="card-content">UI/UX Design Fundamentals</div>
             </div>
         </div>
         <br>
         <a href="projects.html" class="btn">See All Qualifications</a>
+    </section>
+    <!-- Qualifications Section -->
+    <section id="qualifications" class="section">
+        <h2>Skills</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="/image/css.png" alt="Qualification 1">
+                <div class="card-content">Full-Stack Developer | MERN Stack</div>
+            </div>
+            <div class="card">
+                <img src="/image/js.png" alt="Qualification 2">
+                <div class="card-content">Certified Ethical Hacker (CEH)</div>
+            </div>
+            <div class="card">
+                <img src="/image/veujs.png" alt="Qualification 3">
+                <div class="card-content">UI/UX Design Fundamentals</div>
+            </div>
+        </div>
+        <br>
+        <a href="projects.html" class="btn">See All Skills</a>
     </section>
 
     <!-- Projects Section -->
@@ -74,16 +94,19 @@ Let's connect and explore opportunities to collaborate!
         <h2>Projects</h2>
         <div class="cards">
             <div class="card">
+                <img src="/image/nsss.jfif" alt="Qualification 1">
                 <h3>Portfolio Website</h3>
                 <p>Stack: HTML, CSS, JavaScript</p>
                 <a href="#" class="btn">View Project</a>
             </div>
             <div class="card">
+                <img src="/image/mountain.jpg" alt="Qualification 2">
                 <h3>Task Manager App</h3>
                 <p>Stack: React, Node.js</p>
                 <a href="#" class="btn">View Project</a>
             </div>
             <div class="card">
+                <img src="/image/portfolio.jpg" alt="Qualification 3">
                 <h3>Weather Dashboard</h3>
                 <p>Stack: JavaScript, API Integration</p>
                 <a href="#" class="btn">View Project</a>
@@ -110,7 +133,7 @@ Let's connect and explore opportunities to collaborate!
     </footer>
 
     <script>
-        const typedText = ["Mensah Gibson", "a Web Developer", "a Creative Thinker"];
+        const typedText = ["Mensah Gibson", "a Full Stack Web Developer", "a Creative Thinker","a Prolem Solver","an Innovator"];
         let count = 0, index = 0, currentText = '', letter = '';
 
         (function type() {
@@ -127,6 +150,29 @@ Let's connect and explore opportunities to collaborate!
                 setTimeout(type, 150);
             }
         }());
+        const images=["url(./image/beach.jpeg)","url(./image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg)","url(./image/new.jpg)"]
+        const hero = document.getElementById("hero");
+        let i = 0;
+        (function slideshow(){
+            hero.style.backgroundImage=images[i]
+            hero.style.backgroundRepeat="no-repeat";
+            hero.style.backgroundSize="cover";
+            hero.style.backgroundPosition="center";
+            hero.style.background;
+            if (i<images.length){
+            setTimeout(slideshow,50000) 
+           i++
+        }
+        else if(i=images.length){
+           i =0
+            setTimeout(slideshow,5000)
+        }
+
+        }())
+
+       
     </script>
 </body>
 </html>
+
+

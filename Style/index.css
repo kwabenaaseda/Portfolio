@@ -29,6 +29,10 @@ body {
     padding: 20px;
     position: relative;
     overflow: hidden;
+    background-attachment: fixed;
+    transition-duration: 5s;
+    transition-timing-function: ease-in-out;
+    transition-property: all;
 }
 
 .hero h1 {
@@ -38,7 +42,7 @@ body {
 }
 
 .hero .typing {
-    color: #00f7ff;
+    color: #ff8800;
 }
 
 .tagline {
@@ -110,7 +114,9 @@ body {
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 15rem;
+    align-content: center;
+    justify-content: center;
     border-radius: 10px;
 }
 
