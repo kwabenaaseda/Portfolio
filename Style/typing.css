@@ -1,0 +1,20 @@
+#Welcome{
+    width: max-content;
+    border-right:2px solid grey;
+    padding-right:2px;
+    animation-name:flicker;
+    animation-duration:1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes flicker{
+    from{
+        border-right:2px solid grey;
+    }
+    to{
+        border-right:2px solid transparent;
+    }
+}
+
+
