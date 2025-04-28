@@ -25,10 +25,13 @@
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
+        <div class="hero-background" id="hero-bg"></div>
+      
         <h1>Hi, I'm <span class="typing"></span></h1>
         <p class="tagline">Full Stack Web Developer | Problem Solver | Creative Thinker | Innovator</p>
         <a href="#projects" class="btn">View My Work</a>
-    </header>
+      </header>
+      
 
     <!-- About Section -->
     <section id="about" class="section">
@@ -150,25 +153,43 @@ Let's connect and explore opportunities to collaborate!
                 setTimeout(type, 150);
             }
         }());
-        const images=["url(./image/beach.jpeg)","url(./image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg)","url(./image/new.jpg)"]
-        const hero = document.getElementById("hero");
-        let i = 0;
-        (function slideshow(){
-            hero.style.backgroundImage=images[i]
-            hero.style.backgroundRepeat="no-repeat";
-            hero.style.backgroundSize="cover";
-            hero.style.backgroundPosition="center";
-            hero.style.background;
-            if (i<images.length){
-            setTimeout(slideshow,50000) 
-           i++
-        }
-        else if(i=images.length){
-           i =0
-            setTimeout(slideshow,5000)
-        }
 
-        }())
+        const heroBg = document.getElementById('hero-bg');
+        const images = [
+"url(./image/beach.jpeg)",
+"url(./image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg)",
+"url(./image/new.jpg)"
+];
+
+let i = 0;
+
+(function slideshow() {
+  // Step 1: Fade out only the background
+  heroBg.style.opacity = 0;
+
+  setTimeout(() => {
+    // Step 2: After fade out, change background
+    heroBg.style.background = `linear-gradient(rgba(10,10,10,0.7), rgba(10,10,10,0.7)), ${images[i]}`;
+    heroBg.style.backgroundRepeat = "no-repeat";
+    heroBg.style.backgroundSize = "cover";
+    heroBg.style.backgroundPosition = "center";
+    heroBg.style.backgroundAttachment = "fixed";
+
+    // Step 3: Fade in the background
+    heroBg.style.opacity = 1;
+
+    // Step 4: Prepare for next image
+    i++;
+    if (i >= images.length) i = 0;
+
+    // Step 5: Wait before next switch
+    setTimeout(slideshow, 10000); // 5 seconds between changes
+  }, 1000); // 1 second to fade out before switching
+})();
+
+
+
+
 
        
     </script>
