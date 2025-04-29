@@ -242,3 +242,19 @@ footer {
         width:70%;
     }
 }
+
+
+#live{
+    position:fixed;
+    top: 21rem;
+    right: 1rem;
+    
+}
+#live img{
+    border: 1px none black;
+    border-radius: 50%;
+    padding: 4px;
+    width: 30px;
+    height: 30px;
+    background-color:rgba(73, 255, 17, 0.486);
+}
