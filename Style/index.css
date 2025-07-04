@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background: #f0f2f5;
     color: #222;
     line-height: 1.7;
@@ -230,10 +230,10 @@ footer {
         border:1px solid none;
         width: 14rem;
         height: 14rem;
-        border-radius: 50%;
-        background-image: url(/image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg);
+        border-radius: 15%;
+        background-image: url(/image/me1.png);
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         background-repeat:no-repeat;
     }
 
@@ -257,4 +257,32 @@ footer {
     width: 30px;
     height: 30px;
     background-color:rgba(73, 255, 17, 0.486);
+}
+
+.knowledge{
+    border: 1px solid;
+    padding: 0.4em;
+    border-radius: 15px;
+    background-color: #081414;
+    color: white;
+}
+
+.stack{
+    border: 1px solid;
+    text-align: center;
+    display: flex;
+    width: 110%;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top: none;
+    border-left: none;
+    justify-content: center;
+    margin-bottom: 5px;
+    background-color:rgb(233, 238, 227);
+    
+}
+@media screen and (min-width:769px) {
+    .stack{
+        width: 60%;
+    }
 }

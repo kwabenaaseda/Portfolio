@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+      <meta http-equiv="Cache-control" content="public, max-age=31536000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mensah Gibson's portfolio website. A web developer, cybersecurity expert, and creative thinker. Explore my projects, qualifications, and experience in full-stack development and cybersecurity.">
     <meta name="keywords" content="Mensah Gibson, portfolio, web developer, cybersecurity, MERN stack, full-stack developer, ethical hacker, music production, projects">
@@ -17,6 +18,10 @@
     <meta name="twitter:description" content="Explore the portfolio of Mensah Gibson, a web developer, cybersecurity expert, and creative thinker. View my projects and qualifications.">
     <meta name="twitter:image" content="path_to_image.jpg"> <!-- Update with actual image URL -->
     <meta name="twitter:creator" content="@MensahGibson">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Mensah Gibson - Portfolio</title>
     <link rel="stylesheet" href="/Style/index.css">
     <link rel="icon" href="./image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg" type="image/x-icon">
@@ -28,8 +33,11 @@
         <div class="hero-background" id="hero-bg"></div>
       
         <h1>Hi, I'm <span class="typing"></span></h1>
-        <p class="tagline">Full Stack Web Developer | Problem Solver | Creative Thinker | Innovator</p>
+        <p class="tagline">Backend Software Engineer | Problem Solver | Creative Thinker | Innovator</p>
+        <div class="nav">
+            <a href="/" class="btn">⬅</a>
         <a href="#projects" class="btn">View My Work</a>
+        </div>
       </header>
       
 
@@ -120,16 +128,15 @@
 
         const heroBg = document.getElementById('hero-bg');
         const image = [
-"url(./image/beach.jpeg)",
-"url(./image/WIN_20240208_17_20_55_Pro-fotor-ai-art-effects-20250428023022.jpg)",
-"url(./image/new.jpg)"
+"url(../image/nature.avif)",
+"url(../image/nature.avif)",
 ];
 
 let i = 0;
 
 (function slideshow() {
   // Step 1: Fade out only the background
-  heroBg.style.opacity = 0.5;
+ /*  heroBg.style.opacity = 0.5; */
 
   setTimeout(() => {
     // Step 2: After fade out, change background
